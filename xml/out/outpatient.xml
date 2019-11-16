@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Outpatients namespace="com.tyk.demo.entity.outpatient">
+    <Outpatient id="001">
+        <UserInfo>
+            <Name>王茂</Name>
+            <Sex>男</Sex>
+            <Age>21</Age>
+            <Phone>18382471393</Phone>
+            <IdNumber>510823199611114410</IdNumber>
+            <Address>成都中医药大学</Address>
+        </UserInfo>
+        <Details>
+            <Department>门诊医生</Department>
+            <Time>2017-09-09 03:40</Time>
+            <FourDiagnosis>咳嗽，呼吸声粗，痰量多，咳痰黄稠，不易咯痰，红舌，黄苔，滑数脉，气味腥臭</FourDiagnosis>
+            <Diagnosis>痰热壅肺证</Diagnosis>
+            <SyndromeType>痰热壅肺证</SyndromeType>
+            <Allergy>无</Allergy>
+            <Treatment>清热化痰，活血</Treatment>
+            <DiseaseBit>肺，心，胆</DiseaseBit>
+            <Disease>咳嗽</Disease>
+            <Chinese>宣降止咳汤 地骨皮15.00g 五味子12.00g 白芍15.00g 款冬花12.00g 细辛5.00g 黄芪15.00g 苏子15.00g 灸麻黄12.00g 桂枝10.00g 干姜10.00g</Chinese>
+        </Details>
+    </Outpatient>
+    <Outpatient id="002">
+        <UserInfo>
+            <Name>王茂</Name>
+            <Sex>男</Sex>
+            <Age>21</Age>
+            <Phone>18382471393</Phone>
+            <IdNumber>510823199611114410</IdNumber>
+            <Address>成都中医药大学</Address>
+        </UserInfo>
+        <Details>
+            <Department>门诊医生</Department>
+            <Time>2015-09-09 03:40</Time>
+            <FourDiagnosis>咳嗽，呼吸声粗，痰量多，咳痰黄稠，不易咯痰，红舌，黄苔，滑数脉，气味腥臭</FourDiagnosis>
+            <Diagnosis>痰热壅肺证</Diagnosis>
+            <SyndromeType>痰热壅肺证</SyndromeType>
+            <Allergy>无</Allergy>
+            <Treatment>清热化痰，活血</Treatment>
+            <DiseaseBit>肺，心，胆</DiseaseBit>
+            <Disease>咳嗽</Disease>
+            <Chinese>宣降止咳汤 地骨皮15.00g 五味子12.00g 白芍15.00g 款冬花12.00g 细辛5.00g 黄芪15.00g 苏子15.00g 灸麻黄12.00g 桂枝10.00g 干姜10.00g</Chinese>
+        </Details>
+    </Outpatient>
+    <Outpatient id="003">
+        <UserInfo>
+            <Name>涂元坤</Name>
+            <Sex>男</Sex>
+            <Age>21</Age>
+            <Phone>18382471393</Phone>
+            <IdNumber>510823199611114410</IdNumber>
+            <Address>成都中医药大学</Address>
+        </UserInfo>
+        <Details>
+            <Department>门诊医生</Department>
+            <Time>2015-09-09 03:40</Time>
+            <FourDiagnosis>咳嗽，呼吸声粗，痰量多，咳痰黄稠，不易咯痰，红舌，黄苔，滑数脉，气味腥臭</FourDiagnosis>
+            <Diagnosis>痰热壅肺证</Diagnosis>
+            <SyndromeType>痰热壅肺证</SyndromeType>
+            <Allergy>无</Allergy>
+            <Treatment>清热化痰，活血</Treatment>
+            <DiseaseBit>肺，心，胆</DiseaseBit>
+            <Disease>咳嗽</Disease>
+            <Chinese>宣降止咳汤 地骨皮15.00g 五味子12.00g 白芍15.00g 款冬花12.00g 细辛5.00g 黄芪15.00g 苏子15.00g 灸麻黄12.00g 桂枝10.00g 干姜10.00g</Chinese>
+        </Details>
+    </Outpatient>
+    <Outpatient id="004">
+        <UserInfo>
+            <Name>涂元坤</Name>
+            <Sex>男</Sex>
+            <Age>21</Age>
+            <Phone>18382471393</Phone>
+            <IdNumber>510823199611114410</IdNumber>
+            <Address>成都中医药大学</Address>
+        </UserInfo>
+        <Details>
+            <Department>门诊医生</Department>
+            <Time>2015-09-09 03:40</Time>
+            <FourDiagnosis>咳嗽，呼吸声粗，痰量多，咳痰黄稠，不易咯痰，红舌，黄苔，滑数脉，气味腥臭</FourDiagnosis>
+            <Diagnosis>痰热壅肺证</Diagnosis>
+            <SyndromeType>痰热壅肺证</SyndromeType>
+            <Allergy>无</Allergy>
+            <Treatment>清热化痰，活血</Treatment>
+            <DiseaseBit>肺，心，胆</DiseaseBit>
+            <Disease>咳嗽</Disease>
+            <Chinese>宣降止咳汤 地骨皮15.00g 五味子12.00g 白芍15.00g 款冬花12.00g 细辛5.00g 黄芪15.00g 苏子15.00g 灸麻黄12.00g 桂枝10.00g 干姜10.00g</Chinese>
+        </Details>
+    </Outpatient>
+</Outpatients>

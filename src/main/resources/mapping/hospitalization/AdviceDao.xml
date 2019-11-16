@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tyk.demo.dao.hospitalization.HospitalizationAdviceDao">
+    <insert id="insertAdvice" parameterType="com.tyk.demo.entity.hospitalization.Advice">
+        INSERT INTO `hospitalization.advice` (id, director, deputy, attending, advanced, inpatient, nurse, records, time, route)
+        VALUES (#{id}, #{director}, #{deputy}, #{attending}, #{advanced}, #{inpatient}, #{nurse}, #{records}, #{time},
+                #{route});
+    </insert>
+    <update id="updateAdvice" parameterType="com.tyk.demo.entity.hospitalization.Advice">
+        update `hospitalization.advice`
+        <set>
+            <if test="director != null and director != ''">director = #{director},</if>
+            <if test="deputy != null and deputy != ''">deputy = #{deputy},</if>
+            <if test="attending != null and attending != ''">attending = #{attending},</if>
+            <if test="advanced != null and advanced != ''">advanced = #{advanced},</if>
+            <if test="inpatient != null and inpatient != ''">inpatient = #{inpatient},</if>
+            <if test="nurse != null and nurse != ''">nurse = #{nurse},</if>
+            <if test="records != null and records != ''">records = #{records},</if>
+            <if test="time != null and time != ''">time = #{time},</if>
+            <if test="route != null and route != ''">route = #{route},</if>
+        </set>
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </update>
+    <select id="selectAdvice" resultType="com.tyk.demo.entity.hospitalization.Advice">
+        select id, director, deputy, attending, advanced, inpatient, nurse, records, time, route
+        from `hospitalization.advice`
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </select>
+</mapper>

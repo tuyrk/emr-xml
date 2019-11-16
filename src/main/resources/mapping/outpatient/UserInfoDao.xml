@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tyk.demo.dao.outpatient.OutpatientUserInfoDao">
+    <insert id="insertUserInfo" parameterType="com.tyk.demo.entity.outpatient.UserInfo">
+        INSERT INTO `outpatient.userinfo` (id, name, sex, age, phone, idNumber, address)
+        VALUES (#{id}, #{name}, #{sex}, #{age}, #{phone}, #{idNumber}, #{address});
+    </insert>
+    <update id="updateUserInfo" parameterType="com.tyk.demo.entity.outpatient.UserInfo">
+        update `outpatient.userinfo`
+        <set>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="sex != null and sex != ''">sex = #{sex},</if>
+            <if test="age != null">age = #{age},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="idNumber != null and idNumber != ''">idNumber = #{idNumber},</if>
+            <if test="address != null and address != ''">address = #{address},</if>
+        </set>
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </update>
+    <select id="selectUserInfo" resultType="com.tyk.demo.entity.outpatient.UserInfo">
+        select id, name, sex, age, phone, idNumber, address
+        from `outpatient.userinfo`
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </select>
+</mapper>

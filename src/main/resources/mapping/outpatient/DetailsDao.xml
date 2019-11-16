@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tyk.demo.dao.outpatient.OutpatientDetailsDao">
+    <insert id="insertDetails" parameterType="com.tyk.demo.entity.outpatient.Details">
+        INSERT INTO `outpatient.details` (id, department, time, fourDiagnosis, diagnosis, syndromeType, allergy, treatment, diseaseBit, disease, chinese)
+        VALUES
+            (#{id}, #{department}, #{time}, #{fourDiagnosis}, #{diagnosis}, #{syndromeType}, #{allergy}, #{treatment},
+                    #{diseaseBit}, #{disease}, #{chinese});
+    </insert>
+    <update id="updateDetails" parameterType="com.tyk.demo.entity.outpatient.Details">
+        update `outpatient.details`
+        <set>
+            <if test="department != null and department != ''">department = #{department},</if>
+            <if test="time != null and time != ''">time = #{time},</if>
+            <if test="fourDiagnosis != null and fourDiagnosis != ''">fourDiagnosis = #{fourDiagnosis},</if>
+            <if test="diagnosis != null and diagnosis != ''">diagnosis = #{diagnosis},</if>
+            <if test="syndromeType != null and syndromeType != ''">syndromeType = #{syndromeType},</if>
+            <if test="allergy != null and allergy != ''">allergy = #{allergy},</if>
+            <if test="treatment != null and treatment != ''">treatment = #{treatment},</if>
+            <if test="diseaseBit != null and diseaseBit != ''">diseaseBit = #{diseaseBit},</if>
+            <if test="disease != null and disease != ''">disease = #{disease},</if>
+            <if test="chinese != null and chinese != ''">chinese = #{chinese},</if>
+        </set>
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </update>
+    <select id="selectDetails" resultType="com.tyk.demo.entity.outpatient.Details">
+        select id, department, time, fourDiagnosis, diagnosis, syndromeType, allergy, treatment, diseaseBit, disease, chinese
+        from `outpatient.details`
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </select>
+</mapper>

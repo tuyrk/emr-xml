@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tyk.demo.dao.hospitalization.HospitalizationUserInfoDao">
+    <insert id="insertUserInfo" parameterType="com.tyk.demo.entity.hospitalization.UserInfo">
+        INSERT INTO `hospitalization.userinfo` (id, name, sex, birth, age, position, phone, count, marriage, nation, idNumber, domicile, homeplace)
+        VALUES (#{id}, #{name}, #{sex}, #{birth}, #{age}, #{position}, #{phone}, #{count}, #{marriage}, #{nation},
+                       #{idNumber}, #{domicile}, #{homeplace});
+    </insert>
+    <update id="updateUserInfo" parameterType="com.tyk.demo.entity.hospitalization.UserInfo">
+        update `hospitalization.userinfo`
+        <set>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="sex != null and sex != ''">sex = #{sex},</if>
+            <if test="birth != null and birth != ''">birth = #{birth},</if>
+            <if test="age != null">age = #{age},</if>
+            <if test="position != null and position != ''">position = #{position},</if>
+            <if test="phone != null and phone != ''">phone = #{phone},</if>
+            <if test="count != null">count = #{count},</if>
+            <if test="marriage != null and marriage != ''">marriage = #{marriage},</if>
+            <if test="nation != null and nation != ''">nation = #{nation},</if>
+            <if test="idNumber != null and idNumber != ''">idNumber = #{idNumber},</if>
+            <if test="domicile != null and domicile != ''">domicile = #{domicile},</if>
+            <if test="homeplace != null and homeplace != ''">homeplace = #{homeplace},</if>
+        </set>
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </update>
+    <select id="selectUserInfo" resultType="com.tyk.demo.entity.hospitalization.UserInfo">
+        select id, name, sex, birth, age, position, phone, count, marriage, nation, idNumber, domicile, homeplace
+        from `hospitalization.userinfo`
+        <where>
+            <if test="id != null and id != ''">id = #{id}</if>
+        </where>
+    </select>
+</mapper>
